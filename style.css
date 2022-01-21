@@ -55,17 +55,21 @@ table {
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+}
+
 /* Nav */
 
 nav {
-    background-color: grey;
     width: 950px;
     margin: 0 auto;
     color: white;
     position: absolute;
-    top: 20px;
+    top: 22px;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 14px;
 }
 
 nav ul {
@@ -75,18 +79,33 @@ nav ul {
 }
 
 nav li {
-    border: 1px solid black;
+    border: 1px solid #484848;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(#797979, #5f5f5f, #8b8b8b);
+}
+
+nav li:hover {
+    cursor: pointer;
+    background: linear-gradient(#595959, #393939, #636363);
+}
+
+nav li:first-child {
+    border-radius: 6px 0 0 6px;
 }
 
 nav li:last-child {
     width: 130px;
+    border-radius: 0 6px 6px 0;
 }
 
 nav input {
     width: 80%;
+    background: linear-gradient(#797979, #5f5f5f, #8b8b8b);
+    border: 1px solid #484848;
+    border-radius: 20px;
+    box-shadow: inset 0 2px #3a3a3a;
 }
 
 /* Images */
@@ -111,6 +130,31 @@ main {
     align-items: center;
     color: white;
     grid-column: 1 / -1;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    max-width: 60%;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    font-size: 20px;
+}
+
+.hero h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero h3 a:hover {
+    text-decoration: underline;
 }
 
 .card {
@@ -143,6 +187,15 @@ main {
 
 /* Footer */
 
+a {
+    color: #1292cf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 footer {
     width: 100vw;
     padding: 30px;
@@ -153,13 +206,29 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     justify-content: space-between;
-    font-size: 0.8em;
+    font-size: 10px;
     align-items: center;
 }
 
-footer div {
+.footer-content p:first-child {
+    margin-bottom: 20px;
 }
 
-footer ul {
+.footer-content ul {
     display: flex;
+}
+
+.footer-content li {
+    margin-right: 10px;
+    position: relative;
+}
+
+.footer-content li:after {
+    content: "|";
+    position: absolute;
+    right: -7px;
+}
+
+.footer-content li:last-child:after {
+    content: "";
 }
